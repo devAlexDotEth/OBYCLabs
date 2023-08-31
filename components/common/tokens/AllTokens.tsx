@@ -26,7 +26,7 @@ const AllTokens: NextPage<IProps> = ({ tokenIds, setToken, selectedToken, type }
 
   return (
     <>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", justifyContent: "center" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(13, 1fr)", gap: "35px", justifyContent: "center" }}>
         {
           tokenIds.map((item: any, index: any) => {
             return (

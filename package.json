@@ -12,8 +12,8 @@
     "@mui/icons-material": "^5.10.16",
     "@mui/lab": "^5.0.0-alpha.113",
     "@mui/material": "^5.10.16",
-    "@thirdweb-dev/react": "^3.14.38",
-    "@thirdweb-dev/sdk": "^3.10.57",
+    "@thirdweb-dev/react": "^3.14.35",
+    "@thirdweb-dev/sdk": "^3.10.54",
     "alchemy-sdk": "^2.2.5",
     "axios": "^1.2.2",
     "ethers": "^5.7.2",
@@ -22,7 +22,7 @@
     "react-dom": "^18.1.0",
     "react-player": "^2.11.0",
     "swr": "^2.0.0",
-    "web3": "^1.8.0",
+    "web3": "^4.1.1",
     "web3-utils": "^1.8.0"
   },
   "devDependencies": {

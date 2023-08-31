@@ -48,13 +48,13 @@ const TabPanelComponent = () => {
           </button>
         ))}
       </div>
-      <div className={styles2["tab-content"]}>
+      <div className={styles2["tab-content"]} style={{ overflowY: 'auto', height: '1080px' }}>
         {activeTab === 0 && <LevelOne />}
         {activeTab === 1 && <Leveltwo />}
         {activeTab === 2 && <LevelThree />}
       </div>
     </div>
-  );
+  );  
 };
 
 export default TabPanelComponent
