@@ -1,0 +1,2 @@
+export const clientID="cb350418d6eb2571cb5af9e8bdf880da";
+export const secretKey="BTt9GUbEx6_PoMQn5pXW1wCqIYuFWA94mXucfXw66iaIYtoAQyLRsZ913lP6OFXSd1OuoyOxfegD_a4Cxaj9ZQ"

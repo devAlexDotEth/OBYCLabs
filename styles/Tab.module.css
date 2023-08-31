@@ -1,0 +1,41 @@
+/* Tab.module.css */
+.tab-panel {
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #222;
+  color: #fff;
+  width: 80%;
+}
+
+.tab-buttons {
+  display: flex;
+  border-bottom: 1px solid #333;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #ccc;
+}
+
+.tab-button:hover {
+  background-color: #333;
+}
+
+.tab-button.active {
+  background-color: #444;
+  border-bottom: 2px solid yellow;
+  color: #fff;
+}
+
+.tab-content {
+  padding: 20px;
+}
