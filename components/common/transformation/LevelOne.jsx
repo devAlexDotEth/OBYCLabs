@@ -132,6 +132,7 @@ export const LevelOne = () => {
       obycToken >= 0 &&
       (await isAlreadyMintedMvML1(obycToken))
     ) {
+      alert("This Bear 🐼 is already transformed")
       setErr(true);
       setErrMsg("This token has been minted already");
     } else if (status == 2 && obycLabToken >= 0 && !hasApproved) {
@@ -189,7 +190,7 @@ export const LevelOne = () => {
           setErr(true);
           setBtnText("Select Your OBYC Token");
           setErrMsg(
-            "You minted Successfully. Your Bear is transforming, it will reveal within 24hrs!"
+            "You minted successfully. Your Bear 🐼 is transforming, it will reveal during transformations Tuesdays/Thursdays!"
           );
           setLevelOneData(address, obycToken, obycLabToken);
         })
