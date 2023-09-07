@@ -1,3 +1,7 @@
+.tokensDisplay{
+    overflow: scroll;
+
+}
 .tokensDisplay::-webkit-scrollbar {
     display: none;
 
