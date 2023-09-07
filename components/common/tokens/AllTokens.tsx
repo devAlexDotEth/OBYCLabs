@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Pagination from '@mui/material/Pagination';
 import usePagination from "../pagination/Pagination";
 import { Box } from "@mui/material";
-
+import styles from "../../../styles/AllTokens.module.css"
 interface IProps {
   tokenIds: any[],
   selectedToken: any,
@@ -26,7 +26,7 @@ const AllTokens: NextPage<IProps> = ({ tokenIds, setToken, selectedToken, type }
 
   return (
     <>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(6, 1fr)", gap: "30px", justifyContent: "center" }}>
+      <div className={styles.tokensDisplay} style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "30px", justifyContent: "center" }}>
         {
           tokenIds.map((item: any, index: any) => {
             return (
@@ -48,32 +48,29 @@ const AllTokens: NextPage<IProps> = ({ tokenIds, setToken, selectedToken, type }
               </div>
             )
           })
+          // ["https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png", "https://ipfs.io/ipfs/QmaGv9ihX3ey3W958H64e1ZvXeFs4cs655xH5xY5xZuibD/5567.png",].map((item: any, index: any) => {
+          //   return (
+          //     <div
+          //       style={{ maxWidth: "100%" }}
+          //       key={"nft" + index}
+
+          //     >
+
+          //       <Token
+          //         type={"1"}
+          //         selectedToken={0}
+          //         setToken={setToken}
+          //         key={"nftToken" + index}
+          //         tokenId={"token" + index}
+          //         imageUrl={item}
+          //         token={item}
+          //       />
+          //     </div>
+          //   )
+          // })
+
         }
       </div>
-      <Box sx={{ display: "flex", justifyContent: "center" }} >
-        {/* <Pagination
-          sx={{
-            mt: 5,
-            "& .MuiPaginationItem-root": {
-              color: "black",
-              borderColor: "black",
-              fontWeight: "bold"
-            },
-            "& .Mui-selected": {
-              color: "white",
-              borderColor: "white",
-              fontWeight: "bold"
-            }
-          }}
-          count={count}
-          size="large"
-          page={page}
-          variant="outlined"
-          shape="rounded"
-          onChange={handleChange}
-        />
-       */}
-      </Box>
 
     </>
   );

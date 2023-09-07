@@ -181,13 +181,15 @@ export const LevelOne = () => {
       console.log("obyc lab token",(obycLabToken));
 
       const owner = await obycContract.call("ownerOf", [BigNumber.from(obycToken)]);
+      console.log("owner is ",owner);
       if (String(owner) != String(address)) {
         setStatus(1);
         setErr(true);
-        setErrMsg("You Are Not the Owner of this Token");
+        alert("You Are Not the Owner of this Token");
         return;
       }
       // params mint obycToken,labTokenId,mvmToken,mvmL2TokenId,level
+      console.log("calling mint",[parseInt(obycToken), parseInt(obycLabToken), 0,0,1]);
       await mvmContract
         ?.call("mint", [parseInt(obycToken), parseInt(obycLabToken), 0,0,1])
         .then((res) => {

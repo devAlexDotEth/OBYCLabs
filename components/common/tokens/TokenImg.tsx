@@ -14,10 +14,12 @@ const TokenImg: NextPage<IProps> = ({ tokenId, imageUrl, setToken, selectedToken
 
   const dimention = type == 'obyc' ? '100px' : "150px"
   console.log("token is ", tokenId);
-  let tokenImg=null;
-  if(token.metadata)
-  tokenImg = token?.metadata?.image
-
+  let tokenImg = null;
+  if (token.metadata)
+    tokenImg = token?.metadata?.image
+  // if (!tokenImg) {
+  //   tokenImg = imageUrl;
+  // }
   const handleClick = () => {
     // console.log(tokenId,'tpokeneada')
     setToken(tokenId)
