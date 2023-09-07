@@ -121,6 +121,9 @@ export const LevelOne = () => {
   const handleOnClickBtn = async () => {
     // setLevelOneData()
     // mintMutantNft()
+    console.log("handling btn click",{
+      status,obycLabToken,hasApproved
+    });
     if (status == 1 && obycToken.length == 0) {
       setErr(true);
       setErrMsg("Please Select An Obyc Token First");
@@ -133,11 +136,13 @@ export const LevelOne = () => {
       (await isAlreadyMintedMvML1(obycToken))
     ) {
       alert("This Bear 🐼 is already transformed")
-      setErr(true);
-      setErrMsg("This token has been minted already");
+      // setErr(true);
+      // setErrMsg("This token has been minted already");
     } else if (status == 2 && obycLabToken >= 0 && !hasApproved) {
-      setApproval();
+      console.log("calling setApproval");
+      await setApproval();
     } else if (status == 1 && obycToken >= 0 && !hasApproved) {
+      // await setApproval();
       setStatus(2);
       setShowDisclaimer(true);
       setBtnText("Permission to Burn Lab Item");
@@ -212,10 +217,11 @@ export const LevelOne = () => {
 
   const setApproval = async () => {
     try {
+      let mvmContractAddress= mvmContract?.getAddress()
       const approval = await obycLabContract?.call(
         "setApprovalForAll",
-        mvmContract?.getAddress(),
-        true
+        [mvmContractAddress,true]
+        
       );
       if (approval) {
         setStatus(2);
@@ -269,6 +275,7 @@ export const LevelOne = () => {
         obyc: obycToken,
       }
     );
+    console.log("response of isMinted",response);
     if (response.data.status) {
       return true;
     }
@@ -353,8 +360,7 @@ export const LevelOne = () => {
               </button>
               <button
                 onClick={handleOnClickBtn}
-                
-                
+                              
                 >{btnText}
               </button>
             </Box> :

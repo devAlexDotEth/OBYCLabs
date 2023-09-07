@@ -31,6 +31,7 @@ export const getNumberOfOBYCTokensOfAddress = async (address: any, callback: (re
 }
 
 export const getHasApproved = async (userAddress: any, contractAddress: any) => {
+  console.log("checking approval for all");
   let hasApproved = await OBYCLabsContract.methods.isApprovedForAll(userAddress, contractAddress).call()
   return hasApproved
 }
